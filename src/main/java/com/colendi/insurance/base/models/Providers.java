@@ -1,5 +1,7 @@
 package com.colendi.insurance.base.models;
 
+import com.colendi.insurance.base.enums.status;
+
 public class Providers {
     protected Long id;
     protected String name;
@@ -8,7 +10,7 @@ public class Providers {
     protected String endpoint;
     protected String private_key;
     protected String access_key;
-    protected Boolean status;
+    protected status status;
 
     public Long getId() {
         return id;
@@ -66,11 +68,11 @@ public class Providers {
         this.access_key = access_key;
     }
 
-    public Boolean getStatus() {
+    public status getStatus() {
         return status;
     }
 
-    public void setStatus(Boolean status) {
+    public void setStatus(status status) {
         this.status = status;
     }
 }
