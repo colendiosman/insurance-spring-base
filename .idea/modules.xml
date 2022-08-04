@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/colendi-insurance.iml" filepath="$PROJECT_DIR$/.idea/colendi-insurance.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/insurance-spring-base.iml" filepath="$PROJECT_DIR$/.idea/insurance-spring-base.iml" />
     </modules>
   </component>
 </project>
