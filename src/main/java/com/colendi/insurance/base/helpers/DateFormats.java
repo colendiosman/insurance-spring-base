@@ -4,7 +4,7 @@ import java.time.LocalTime;
 import java.util.Date;
 
 public class DateFormats {
-    public Date GetDateNow(){
+    public static Date GetDateNow(){
         SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
         Date date = new Date();
         formatter.format(date);
