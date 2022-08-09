@@ -1,9 +1,13 @@
 package com.colendi.insurance.base.models;
+import javax.persistence.Column;
 import java.util.Date;
 
 public class Base {
+    @Column(name = "createdAd")
     private Date createdAt;
+    @Column(name = "updatedAd")
     private Date updatedAt;
+    @Column(name = "deletedAd")
     private Date deletedAt;
 
     public Date getCreatedAt() {
