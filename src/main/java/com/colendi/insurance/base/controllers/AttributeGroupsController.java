@@ -9,11 +9,5 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/attributeGroups")
 public class AttributeGroupsController extends BaseController {
-    @Autowired
-    private final AttributeGroupsController service;
 
-    /*public AttributeGroupsController(){
-        service = new AttributeGroupsService();
-    }
-     */
 }
