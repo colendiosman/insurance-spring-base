@@ -32,15 +32,12 @@ public class AccountsService {
 
     public ResponseEntity<Accounts> save(Accounts param){
         try {
-            DateFormats dateFormats = new DateFormats();
-            Date now = dateFormats.GetDateNow();
-
             Accounts createdAccounts = new Accounts();
             createdAccounts.setId(param.getId());
             createdAccounts.setName(param.getName());
-            createdAccounts.setCreatedAt(now);
-            createdAccounts.setUpdatedAt(now);
-            createdAccounts.setDeletedAt(now);
+            createdAccounts.setCreatedAt(DateFormats.GetDateNow());
+            createdAccounts.setUpdatedAt(DateFormats.GetDateNow());
+            createdAccounts.setDeletedAt(DateFormats.GetDateNow());
 
             repository.save(createdAccounts);
             return new ResponseEntity<>(createdAccounts, HttpStatus.CREATED);
