@@ -1,16 +1,27 @@
 package com.colendi.insurance.base.models;
 
-import com.colendi.insurance.base.enums.status;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
-public class Providers {
-    protected Long id;
-    protected String name;
-    protected String description;
-    protected String logo_url;
-    protected String endpoint;
-    protected String private_key;
-    protected String access_key;
-    protected status status;
+@Entity
+@Table(name = "providers")
+public class Providers extends Base {
+    @Id
+    private Long id;
+
+    @Column(name = "title", nullable = false)
+    private String title;
+
+    @Column(name = "logo")
+    private String logo;
+
+    @Column(name = "status")
+    private Integer status;
+
+    @Column(name = "isInternal")
+    private Integer isInternal;
 
     public Long getId() {
         return id;
@@ -20,59 +31,35 @@ public class Providers {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getTitle() {
+        return title;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
-    public String getDescription() {
-        return description;
+    public String getLogo() {
+        return logo;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setLogo(String logo) {
+        this.logo = logo;
     }
 
-    public String getLogo_url() {
-        return logo_url;
-    }
-
-    public void setLogo_url(String logo_url) {
-        this.logo_url = logo_url;
-    }
-
-    public String getEndpoint() {
-        return endpoint;
-    }
-
-    public void setEndpoint(String endpoint) {
-        this.endpoint = endpoint;
-    }
-
-    public String getPrivate_key() {
-        return private_key;
-    }
-
-    public void setPrivate_key(String private_key) {
-        this.private_key = private_key;
-    }
-
-    public String getAccess_key() {
-        return access_key;
-    }
-
-    public void setAccess_key(String access_key) {
-        this.access_key = access_key;
-    }
-
-    public status getStatus() {
+    public Integer getStatus() {
         return status;
     }
 
-    public void setStatus(status status) {
+    public void setStatus(Integer status) {
         this.status = status;
+    }
+
+    public Integer getIsInternal() {
+        return isInternal;
+    }
+
+    public void setIsInternal(Integer isInternal) {
+        this.isInternal = isInternal;
     }
 }

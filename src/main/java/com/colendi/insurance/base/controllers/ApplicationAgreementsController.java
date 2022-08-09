@@ -1,4 +1,4 @@
 package com.colendi.insurance.base.controllers;
 
-public class UsersController {
+public class ApplicationAgreementsController {
 }

@@ -1,32 +1,12 @@
 package com.colendi.insurance.base.controllers;
 
-import com.colendi.insurance.base.models.Providers;
-import com.colendi.insurance.base.services.ProvidersService;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("/providers")
-public class ProvidersController extends BaseController{
+public class ProvidersController {
 
-    @GetMapping("")
-    List<Providers> all() {
-        return (new ProvidersService()).list();
-    }
-
-    @PostMapping("/create")
-    Providers createProvider(@RequestBody Providers provider) {
-        return (new ProvidersService()).create(provider);
-    }
-
-    @GetMapping("/{id}")
-    Providers one(@PathVariable Long id) {
-        return (new ProvidersService()).detail(id);
-    }
-
-    @PutMapping("/{id}")
-    Boolean deleteEmployee(@PathVariable int id) {
-        return (new ProvidersService()).changeStatus(id);
-    }
 }
