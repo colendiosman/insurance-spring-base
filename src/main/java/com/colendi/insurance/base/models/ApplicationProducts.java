@@ -11,9 +11,9 @@ public class ApplicationProducts extends Base{
     @Id
     private Long id;
     @Column(name = "productId")
-    private Integer productId;
+    private int productId;
     @Column(name = "applicationId")
-    private Integer applicationId;
+    private int applicationId;
 
     public Long getId() {
         return id;
@@ -23,19 +23,19 @@ public class ApplicationProducts extends Base{
         this.id = id;
     }
 
-    public Integer getProductId() {
+    public int getProductId() {
         return productId;
     }
 
-    public void setProductId(Integer productId) {
+    public void setProductId(int productId) {
         this.productId = productId;
     }
 
-    public Integer getApplicationId() {
+    public int getApplicationId() {
         return applicationId;
     }
 
-    public void setApplicationId(Integer applicationId) {
+    public void setApplicationId(int applicationId) {
         this.applicationId = applicationId;
     }
 }

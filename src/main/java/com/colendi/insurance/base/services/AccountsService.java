@@ -35,6 +35,7 @@ public class AccountsService {
             Accounts createdAccounts = new Accounts();
             createdAccounts.setId(param.getId());
             createdAccounts.setName(param.getName());
+            createdAccounts.setDescription(param.getDescription());
             createdAccounts.setCreatedAt(DateFormats.GetDateNow());
             createdAccounts.setUpdatedAt(DateFormats.GetDateNow());
             createdAccounts.setDeletedAt(DateFormats.GetDateNow());
