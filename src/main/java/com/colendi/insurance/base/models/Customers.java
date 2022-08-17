@@ -1,10 +1,16 @@
 package com.colendi.insurance.base.models;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.util.Date;
 
+@Getter
+@Setter
 @Entity
 @Table(name = "customers")
 public class Customers extends Base{
@@ -26,73 +32,13 @@ public class Customers extends Base{
     @Column(name = "email")
     private String email;
 
+    @Column(name = "birthDate")
+    private Date birthDate;
+
     @Column(name = "city")
     private String city;
 
     @Column(name = "district")
     private String district;
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getTckn() {
-        return tckn;
-    }
-
-    public void setTckn(String tckn) {
-        this.tckn = tckn;
-    }
-
-    public String getGsm() {
-        return gsm;
-    }
-
-    public void setGsm(String gsm) {
-        this.gsm = gsm;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getCity() {
-        return city;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
-    }
-
-    public String getDistrict() {
-        return district;
-    }
-
-    public void setDistrict(String district) {
-        this.district = district;
-    }
 }
